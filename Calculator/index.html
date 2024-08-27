@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <style>
+    .buttonNumber {
+      width: 60px;
+      height: 50px;
+      border-radius: 100px;
+      margin: 5px;
+    }
+    .title{
+      color: white;
+      font-size: 48px;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: underline;
+    }
+  </style>
+  <body style="background-color: black">
+    <div class="title">Claculator</div>
+    <div
+      class="conatinerr"
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      "
+    >
+      <div
+        class="CalculatorBody"
+        style="
+          background-color: aliceblue;
+          border-radius: 10px;
+          padding: 10px;
+          height: 400px;
+          width: 300px;
+          border: 5px solid rgb(255, 253, 253);
+          box-shadow: 5px 5px 20px rgb(199, 199, 199);
+        "
+      >
+        <div class="input">
+          <form
+            style="
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            <input
+              type="text"
+              class="display"
+              name="display"
+              style="height: 50px; width: 250px; border-radius: 5px"
+            />
+            <div class="div">
+              <button class="Calculate" style="width: 100px">Calculte</button>
+            </div>
+          </form>
+        </div>
+        <div class="cancel" style="text-align: end">
+          <input
+            type="button"
+            onclick="Clear()"
+            value="c"
+            style="width: 60px; height: 30px; margin-bottom: 30px"
+          />
+        </div>
+        <div
+          class="numberContainer"
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <div class="button-group">
+            <input
+              type="button"
+              class="buttonNumber"
+              onclick="append(7)"
+              value="7"
+            />
+            <input
+              type="button"
+              class="buttonNumber"
+              onclick="append(8)"
+              value="8"
+            />
+            <input
+              type="button"
+              class="buttonNumber"
+              onclick="append(9)"
+              value="9"
+            />
+            <input
+              type="button"
+              class="buttonNumber"
+              onclick='append(value="*")'
+              value="*"
+            />
+          </div>
+          <div class="button-group">
+            <input
+              type="button"
+              class="buttonNumber"
+              onclick="append(4)"
+              value="4"
+            />
+            <input
+              type="button"
+              class="buttonNumber"
+              onclick="append(5)"
+              value="5"
+            />
+            <input
+              type="button"
+              class="buttonNumber"
+              onclick="append(6)"
+              value="6"
+            />
+            <input
+              type="button"
+              class="buttonNumber"
+              onclick="append('-')"
+              value="-"
+            />
+          </div>
+          <div class="button-group">
+            <input
+              type="button"
+              class="buttonNumber"
+              onclick="append(1)"
+              value="1"
+            />
+            <input
+              type="button"
+              class="buttonNumber"
+              onclick="append(2)"
+              value="2"
+            />
+            <input
+              type="button"
+              class="buttonNumber"
+              onclick="append(3)"
+              value="3"
+            />
+            <input
+              type="button"
+              class="buttonNumber"
+              onclick='append(value="+")'
+              value="+"
+            />
+          </div>
+          <div class="button-group">
+            <input
+              type="button"
+              class="buttonNumber"
+              onclick='append(value="/")'
+              value="/"
+            />
+            <input
+              type="button"
+              class="buttonNumber"
+              onclick="append(0)"
+              value="0"
+            />
+            <input
+              type="button"
+              class="buttonNumber"
+              onclick="CalculateAll(value='=')"
+              value="="
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./calcultor.js"></script>
+</html>
